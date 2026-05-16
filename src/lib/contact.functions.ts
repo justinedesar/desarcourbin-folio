@@ -1,0 +1,34 @@
+import { createServerFn } from "@tanstack/react-start";
+import { z } from "zod";
+import { supabaseAdmin } from "@/integrations/supabase/client.server";
+
+const schema = z.object({
+  full_name: z.string().trim().min(1).max(120),
+  email: z.string().trim().email().max(200),
+  linkedin_url: z.string().trim().url().max(300),
+  company: z.string().trim().min(1).max(200),
+  funding_stage: z.string().max(60).optional().nullable(),
+  team_size: z.string().max(60).optional().nullable(),
+  sector: z.string().max(200).optional().nullable(),
+  target_market: z.string().max(200).optional().nullable(),
+  mission_type: z.array(z.string().max(60)).max(10).optional().default([]),
+  engagement: z.string().max(60).optional().nullable(),
+  duration: z.string().max(60).optional().nullable(),
+  start_date: z.string().max(60).optional().nullable(),
+  budget: z.string().max(120).optional().nullable(),
+  context: z.string().trim().min(1).max(4000),
+  objective: z.string().max(2000).optional().nullable(),
+  success_criteria: z.string().max(2000).optional().nullable(),
+  language: z.enum(["en", "fr", "es"]).default("en"),
+});
+
+export const submitContact = createServerFn({ method: "POST" })
+  .inputValidator((data: unknown) => schema.parse(data))
+  .handler(async ({ data }) => {
+    const { error } = await supabaseAdmin.from("contact_submissions").insert(data);
+    if (error) {
+      console.error("contact_submissions insert error:", error);
+      throw new Error("Failed to submit");
+    }
+    return { ok: true };
+  });
