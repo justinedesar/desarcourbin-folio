@@ -14,7 +14,111 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      contact_submissions: {
+        Row: {
+          budget: string | null
+          company: string
+          context: string
+          created_at: string
+          duration: string | null
+          email: string
+          engagement: string | null
+          full_name: string
+          funding_stage: string | null
+          id: string
+          language: string | null
+          linkedin_url: string
+          mission_type: string[] | null
+          objective: string | null
+          sector: string | null
+          start_date: string | null
+          success_criteria: string | null
+          target_market: string | null
+          team_size: string | null
+        }
+        Insert: {
+          budget?: string | null
+          company: string
+          context: string
+          created_at?: string
+          duration?: string | null
+          email: string
+          engagement?: string | null
+          full_name: string
+          funding_stage?: string | null
+          id?: string
+          language?: string | null
+          linkedin_url: string
+          mission_type?: string[] | null
+          objective?: string | null
+          sector?: string | null
+          start_date?: string | null
+          success_criteria?: string | null
+          target_market?: string | null
+          team_size?: string | null
+        }
+        Update: {
+          budget?: string | null
+          company?: string
+          context?: string
+          created_at?: string
+          duration?: string | null
+          email?: string
+          engagement?: string | null
+          full_name?: string
+          funding_stage?: string | null
+          id?: string
+          language?: string | null
+          linkedin_url?: string
+          mission_type?: string[] | null
+          objective?: string | null
+          sector?: string | null
+          start_date?: string | null
+          success_criteria?: string | null
+          target_market?: string | null
+          team_size?: string | null
+        }
+        Relationships: []
+      }
+      projects: {
+        Row: {
+          active: boolean
+          created_at: string
+          description: string | null
+          id: string
+          image_url: string | null
+          link: string | null
+          order: number | null
+          subtitle: string | null
+          tags: string[] | null
+          title: string
+        }
+        Insert: {
+          active?: boolean
+          created_at?: string
+          description?: string | null
+          id?: string
+          image_url?: string | null
+          link?: string | null
+          order?: number | null
+          subtitle?: string | null
+          tags?: string[] | null
+          title: string
+        }
+        Update: {
+          active?: boolean
+          created_at?: string
+          description?: string | null
+          id?: string
+          image_url?: string | null
+          link?: string | null
+          order?: number | null
+          subtitle?: string | null
+          tags?: string[] | null
+          title?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
