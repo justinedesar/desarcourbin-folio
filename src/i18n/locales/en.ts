@@ -9,8 +9,8 @@ export const en = {
   },
   hero: {
     label: "FRACTIONAL VP SALES · OPERATING PARTNER · BUSINESS ANGEL",
-    h1_1: "Revenue engine",
-    h1_2: "builder.",
+    h1_1: "Start-up Advisory",
+    h1_2: "& Operating Partner",
     tagline:
       "I help B2B tech scale-ups build a structured and predictable revenue engine — from GTM strategy through to hands-on execution.",
     primary: "Book a call",
