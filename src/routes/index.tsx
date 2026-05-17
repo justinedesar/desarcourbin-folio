@@ -111,13 +111,21 @@ function Home() {
       </section>
 
       {/* WHAT I DO */}
-      <section id="what_i_do" className="bg-dark text-bg py-20 px-6">
-        <div className="mx-auto max-w-7xl grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+      <section id="what_i_do" className="relative text-white py-20 px-6 overflow-hidden">
+        <img
+          src={barcelona}
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ filter: "grayscale(1) contrast(0.9) brightness(0.95)", objectPosition: "center bottom" }}
+        />
+        <div className="absolute inset-0 bg-black/55" />
+        <div className="relative z-10 mx-auto max-w-7xl grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
           {whatItems.map((item, i) => (
             <Reveal key={i} delay={i * 0.1}>
               <div className="font-serif text-accent-light text-sm">{String(i + 1).padStart(2, "0")}</div>
               <div className="h-[2px] w-8 bg-accent my-3" />
-              <p className="text-sm md:text-base text-bg leading-relaxed">{item}</p>
+              <p className="text-sm md:text-base text-white leading-relaxed">{item}</p>
             </Reveal>
           ))}
         </div>
