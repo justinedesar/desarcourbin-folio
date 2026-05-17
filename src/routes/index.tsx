@@ -119,7 +119,7 @@ function Home() {
           className="absolute inset-0 w-full h-full object-cover"
           style={{ filter: "grayscale(1) contrast(0.9) brightness(0.95)", objectPosition: "center bottom" }}
         />
-        <div className="absolute inset-0 bg-black/55" />
+        
         <div className="relative z-10 mx-auto max-w-7xl grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
           {whatItems.map((item, i) => (
             <Reveal key={i} delay={i * 0.1}>
