@@ -50,13 +50,13 @@ function Home() {
           src={barcelona}
           alt="Aerial view of Barcelona"
           className="absolute inset-0 w-full h-full object-cover"
-          style={{ filter: "saturate(0.5) sepia(0.1) hue-rotate(80deg)" }}
+          style={{ filter: "grayscale(1) contrast(0.9) brightness(1.15)" }}
         />
         <div
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(to right, rgba(26,26,24,0.85) 0%, rgba(26,26,24,0.5) 55%, rgba(26,26,24,0.15) 100%)",
+              "linear-gradient(to right, rgba(60,60,60,0.65) 0%, rgba(80,80,80,0.35) 55%, rgba(120,120,120,0.15) 100%)",
           }}
         />
         <img
