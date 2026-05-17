@@ -44,13 +44,13 @@ function Home() {
 
   return (
     <>
-      {/* HERO */}
-      <section className="relative overflow-hidden" style={{ minHeight: "100vh" }}>
+      {/* HERO + WHAT I DO (shared background) */}
+      <div className="relative overflow-hidden">
         <img
           src={barcelona}
           alt="Aerial view of Barcelona"
           className="absolute inset-0 w-full h-full object-cover"
-          style={{ filter: "grayscale(1) contrast(0.9) brightness(1.15)" }}
+          style={{ filter: "grayscale(1) contrast(0.9) brightness(1.1)" }}
         />
         <div
           className="absolute inset-0"
@@ -62,74 +62,70 @@ function Home() {
         <img
           src={portrait}
           alt="Justine Desardurats"
-          className="hidden lg:block absolute right-0 bottom-0 h-[85vh] object-cover object-top grayscale"
+          className="hidden lg:block absolute right-0 top-0 h-[85vh] object-cover object-top grayscale z-10"
           style={{
             maskImage: "linear-gradient(to left, black 70%, transparent 100%)",
             WebkitMaskImage: "linear-gradient(to left, black 70%, transparent 100%)",
           }}
         />
-        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-12 pt-32 pb-24 min-h-screen flex flex-col justify-center">
-          <Reveal>
-            <div className="text-[10px] md:text-[11px] tracking-[0.15em] text-accent-light mb-6 font-medium">
-              {t("hero.label")}
-            </div>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <h1
-              className="text-white font-serif font-normal leading-[1.05]"
-              style={{ fontSize: "clamp(44px, 7vw, 80px)" }}
-            >
-              {t("hero.h1_1")}
-              <br />
-              <span className="text-accent-light italic">{t("hero.h1_2")}</span>
-            </h1>
-          </Reveal>
-          <Reveal delay={0.2}>
-            <p className="mt-6 text-white/85 text-base md:text-lg max-w-xl leading-relaxed">
-              {t("hero.tagline")}
-            </p>
-          </Reveal>
-          <Reveal delay={0.3}>
-            <div className="mt-10 flex flex-wrap items-center gap-6">
-              <a
-                href={CALENDLY}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-accent text-white px-7 py-3.5 rounded-md text-sm font-medium hover:bg-accent-light transition-colors"
-              >
-                {t("hero.primary")}
-              </a>
-              <a href="#services" className="text-white text-sm hover:text-accent-light transition-colors">
-                {t("hero.secondary")}
-              </a>
-            </div>
-          </Reveal>
-        </div>
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/40 animate-bounce">
-          <ChevronDown size={22} />
-        </div>
-      </section>
 
-      {/* WHAT I DO */}
-      <section id="what_i_do" className="relative text-white py-20 px-6 overflow-hidden">
-        <img
-          src={barcelona}
-          alt=""
-          aria-hidden="true"
-          className="absolute inset-0 w-full h-full object-cover"
-          style={{ filter: "grayscale(1) contrast(0.9) brightness(0.95)", objectPosition: "center bottom" }}
-        />
-        
-        <div className="relative z-10 mx-auto max-w-7xl grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
-          {whatItems.map((item, i) => (
-            <Reveal key={i} delay={i * 0.1}>
-              <div className="font-serif text-accent-light text-sm">{String(i + 1).padStart(2, "0")}</div>
-              <div className="h-[2px] w-8 bg-accent my-3" />
-              <p className="text-sm md:text-base text-white leading-relaxed">{item}</p>
+        {/* HERO */}
+        <section className="relative z-20" style={{ minHeight: "100vh" }}>
+          <div className="mx-auto max-w-7xl px-6 lg:px-12 pt-32 pb-24 min-h-screen flex flex-col justify-center">
+            <Reveal>
+              <div className="text-[10px] md:text-[11px] tracking-[0.15em] text-accent-light mb-6 font-medium">
+                {t("hero.label")}
+              </div>
             </Reveal>
-          ))}
-        </div>
-      </section>
+            <Reveal delay={0.1}>
+              <h1
+                className="text-white font-serif font-normal leading-[1.05]"
+                style={{ fontSize: "clamp(44px, 7vw, 80px)" }}
+              >
+                {t("hero.h1_1")}
+                <br />
+                <span className="text-accent-light italic">{t("hero.h1_2")}</span>
+              </h1>
+            </Reveal>
+            <Reveal delay={0.2}>
+              <p className="mt-6 text-white/85 text-base md:text-lg max-w-xl leading-relaxed">
+                {t("hero.tagline")}
+              </p>
+            </Reveal>
+            <Reveal delay={0.3}>
+              <div className="mt-10 flex flex-wrap items-center gap-6">
+                <a
+                  href={CALENDLY}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-accent text-white px-7 py-3.5 rounded-md text-sm font-medium hover:bg-accent-light transition-colors"
+                >
+                  {t("hero.primary")}
+                </a>
+                <a href="#services" className="text-white text-sm hover:text-accent-light transition-colors">
+                  {t("hero.secondary")}
+                </a>
+              </div>
+            </Reveal>
+          </div>
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/40 animate-bounce">
+            <ChevronDown size={22} />
+          </div>
+        </section>
+
+        {/* WHAT I DO */}
+        <section id="what_i_do" className="relative z-20 text-white py-20 px-6">
+          <div className="mx-auto max-w-7xl grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+            {whatItems.map((item, i) => (
+              <Reveal key={i} delay={i * 0.1}>
+                <div className="font-serif text-accent-light text-sm">{String(i + 1).padStart(2, "0")}</div>
+                <div className="h-[2px] w-8 bg-accent my-3" />
+                <p className="text-sm md:text-base text-white leading-relaxed">{item}</p>
+              </Reveal>
+            ))}
+          </div>
+        </section>
+      </div>
 
       {/* SERVICES */}
       <section id="services" className="py-24 md:py-32 px-6 bg-bg">
