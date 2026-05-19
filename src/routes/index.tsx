@@ -178,12 +178,94 @@ function Home() {
         </div>
       </section>
 
+      {/* STRENGTHS */}
+      <section id="strengths" style={{ background: "#F5F7F4", padding: "100px 0" }}>
+        <div className="mx-auto max-w-5xl px-6">
+          <Reveal>
+            <div
+              style={{
+                fontFamily: "var(--font-sans)",
+                fontSize: 10,
+                textTransform: "uppercase",
+                letterSpacing: "0.15em",
+                color: "#2E6B4F",
+                marginBottom: 56,
+              }}
+            >
+              {t("strengths.label")}
+            </div>
+          </Reveal>
+          <div className="grid md:grid-cols-2 gap-x-12 gap-y-4">
+            <div className="space-y-4">
+              {strengthsLeft.map((s, i) => (
+                <Reveal key={s} delay={i * 0.06}>
+                  <div
+                    style={{
+                      fontFamily: "var(--font-sans)",
+                      fontSize: 15,
+                      color: "#1A1A18",
+                      lineHeight: 1.6,
+                    }}
+                  >
+                    <span style={{ color: "#2E6B4F", marginRight: 12 }}>✦</span>
+                    {s}
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+            <div className="space-y-4">
+              {strengthsRight.map((s, i) => (
+                <Reveal key={s} delay={(i + strengthsLeft.length) * 0.06}>
+                  <div
+                    style={{
+                      fontFamily: "var(--font-sans)",
+                      fontSize: 15,
+                      color: "#1A1A18",
+                      lineHeight: 1.6,
+                    }}
+                  >
+                    <span style={{ color: "#2E6B4F", marginRight: 12 }}>✦</span>
+                    {s}
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* EXPERIENCE */}
       <section id="experience" className="py-24 md:py-32 px-6 bg-bg">
         <div className="mx-auto max-w-7xl">
           <Reveal>
             <div className="label-eyebrow mb-3">{t("experience.label")}</div>
-            <h2 className="text-4xl md:text-5xl mb-16 text-text">{t("experience.title")}</h2>
+            <h2 className="text-4xl md:text-5xl mb-10 text-text">{t("experience.title")}</h2>
+          </Reveal>
+          <Reveal>
+            <div
+              id="experience-lead"
+              style={{ maxWidth: 760, margin: "0 auto 64px auto", textAlign: "center" }}
+            >
+              <div
+                style={{
+                  width: 48,
+                  height: 1,
+                  background: "#2E6B4F",
+                  margin: "0 auto 32px auto",
+                }}
+              />
+              <p
+                style={{
+                  fontFamily: "var(--font-sans)",
+                  fontSize: 17,
+                  lineHeight: 1.85,
+                  color: "#4A4A42",
+                  fontStyle: "italic",
+                }}
+              >
+                {t("experience.lead")}
+              </p>
+            </div>
           </Reveal>
           <div className="grid md:grid-cols-5 gap-12">
             <div className="md:col-span-2 space-y-10 relative">
@@ -192,7 +274,18 @@ function Home() {
                 <Reveal key={i} delay={i * 0.1}>
                   <div className="pl-8 relative">
                     <div className="absolute left-0 top-1.5 w-[11px] h-[11px] rounded-full bg-accent" />
-                    <div className="font-serif text-xl text-text">{co.name}</div>
+                    <div
+                      style={{
+                        fontFamily: "var(--font-sans)",
+                        fontSize: 13,
+                        textTransform: "uppercase",
+                        letterSpacing: "0.1em",
+                        color: "#2E6B4F",
+                        fontWeight: 600,
+                      }}
+                    >
+                      {co.name}
+                    </div>
                     <div className="text-xs text-text-muted mt-1 mb-3">{co.period}</div>
                     <ul className="space-y-1 text-[13px] text-text-muted">
                       {co.roles.map((r: string) => <li key={r}>{r}</li>)}
@@ -229,28 +322,89 @@ function Home() {
         </div>
       </section>
 
-      {/* INVESTMENT */}
+      {/* INVESTOR */}
       <section id="investment" className="bg-dark text-bg py-24 md:py-32 px-6">
         <div className="mx-auto max-w-7xl">
           <Reveal>
             <div className="label-eyebrow text-accent-light mb-3">{t("investment.label")}</div>
-            <h2 className="text-4xl md:text-5xl mb-16 text-bg font-serif">{t("investment.title")}</h2>
+            <h2 className="text-4xl md:text-5xl mb-16 text-bg font-serif">{t("investor.section.title")}</h2>
           </Reveal>
-          <div className="grid md:grid-cols-3 gap-6">
-            {investments.map((inv, i) => (
-              <Reveal key={i} delay={i * 0.1}>
-                <div className="border-hair border-white/15 rounded-lg p-8 bg-white/[0.04] h-full">
-                  <h3 className="font-serif text-2xl mb-2">{inv.name}</h3>
-                  <div className="text-[11px] uppercase tracking-wider text-accent-light mb-4">{inv.role}</div>
-                  <div className="text-xs text-bg/60 mb-4">{inv.period}</div>
-                  <p className="text-sm text-bg/80 mb-3">{inv.type}</p>
-                  {inv.focus && <p className="text-xs text-bg/60 italic">{inv.focus}</p>}
-                </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            {investorCards.map((inv, i) => (
+              <Reveal key={i} delay={i * 0.08}>
+                <article
+                  className="h-full transition-shadow hover:shadow-[0_8px_32px_rgba(0,0,0,0.08)]"
+                  style={{
+                    background: "#FFFFFF",
+                    border: "1px solid #E8E8E4",
+                    borderRadius: 4,
+                    padding: "40px 36px",
+                  }}
+                >
+                  <span
+                    className="inline-block"
+                    style={{
+                      fontFamily: "var(--font-sans)",
+                      fontSize: 10,
+                      textTransform: "uppercase",
+                      letterSpacing: "0.12em",
+                      padding: "4px 10px",
+                      background: inv.active ? "#2E6B4F" : "#E8E8E4",
+                      color: inv.active ? "#FFFFFF" : "#4A4A42",
+                    }}
+                  >
+                    {inv.tag}
+                  </span>
+                  <h3
+                    className="font-serif"
+                    style={{ fontSize: 22, color: "#1A1A18", marginTop: 16 }}
+                  >
+                    {inv.name}
+                  </h3>
+                  <div
+                    style={{
+                      fontFamily: "var(--font-sans)",
+                      fontSize: 13,
+                      color: "#2E6B4F",
+                      marginBottom: 12,
+                    }}
+                  >
+                    {inv.role}
+                  </div>
+                  <p
+                    style={{
+                      fontFamily: "var(--font-sans)",
+                      fontSize: 14,
+                      lineHeight: 1.7,
+                      color: "#4A4A42",
+                    }}
+                  >
+                    {inv.description}
+                  </p>
+                  {inv.linkHref && (
+                    <a
+                      href={inv.linkHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        display: "inline-block",
+                        marginTop: 16,
+                        fontFamily: "var(--font-sans)",
+                        fontSize: 12,
+                        color: "#2E6B4F",
+                        textDecoration: "underline",
+                      }}
+                    >
+                      {inv.linkText}
+                    </a>
+                  )}
+                </article>
               </Reveal>
             ))}
           </div>
         </div>
       </section>
+
 
       {/* FAQ */}
       <section id="faq" className="py-24 md:py-32 px-6 bg-bg">
