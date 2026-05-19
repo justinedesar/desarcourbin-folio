@@ -19,10 +19,11 @@ export function Header() {
   }, []);
 
   const sections = [
-    { href: "/#services", label: t("nav.services") },
-    { href: "/#experience", label: t("nav.experience") },
-    { href: "/projects", label: t("nav.projects") },
-    { href: "/#contact", label: t("nav.contact") },
+    { href: "/#services", label: t("nav.services"), type: "anchor" as const },
+    { href: "/#experience", label: t("nav.experience"), type: "anchor" as const },
+    { href: "/projects", label: t("nav.projects"), type: "route" as const },
+    { href: "/about", label: t("nav.about"), type: "route" as const },
+    { href: "/#contact", label: t("nav.contact"), type: "anchor" as const },
   ];
 
   return (
@@ -41,15 +42,25 @@ export function Header() {
           <Link to="/" className="text-sm text-text hover:text-accent transition-colors">
             {t("nav.home")}
           </Link>
-          {sections.map((s) => (
-            <a
-              key={s.href}
-              href={s.href}
-              className="text-sm text-text hover:text-accent transition-colors"
-            >
-              {s.label}
-            </a>
-          ))}
+          {sections.map((s) =>
+            s.type === "route" ? (
+              <Link
+                key={s.href}
+                to={s.href}
+                className="text-sm text-text hover:text-accent transition-colors"
+              >
+                {s.label}
+              </Link>
+            ) : (
+              <a
+                key={s.href}
+                href={s.href}
+                className="text-sm text-text hover:text-accent transition-colors"
+              >
+                {s.label}
+              </a>
+            )
+          )}
         </nav>
 
         <div className="hidden md:flex items-center gap-5">
@@ -93,16 +104,27 @@ export function Header() {
           <Link to="/" className="text-lg" onClick={() => setOpen(false)}>
             {t("nav.home")}
           </Link>
-          {sections.map((s) => (
-            <a
-              key={s.href}
-              href={s.href}
-              className="text-lg"
-              onClick={() => setOpen(false)}
-            >
-              {s.label}
-            </a>
-          ))}
+          {sections.map((s) =>
+            s.type === "route" ? (
+              <Link
+                key={s.href}
+                to={s.href}
+                className="text-lg"
+                onClick={() => setOpen(false)}
+              >
+                {s.label}
+              </Link>
+            ) : (
+              <a
+                key={s.href}
+                href={s.href}
+                className="text-lg"
+                onClick={() => setOpen(false)}
+              >
+                {s.label}
+              </a>
+            )
+          )}
           <div className="flex gap-4 pt-4 border-t-hair border-border">
             {LANGS.map((l) => (
               <button
