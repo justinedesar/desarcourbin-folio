@@ -37,10 +37,13 @@ function Home() {
   const cards = t("services.cards", { returnObjects: true }) as any[];
   const companies = t("experience.companies", { returnObjects: true }) as any[];
   const expertise = t("experience.expertise", { returnObjects: true }) as string[];
-  const investments = t("investment.cards", { returnObjects: true }) as any[];
+  const investorCards = t("investor.cards", { returnObjects: true }) as any[];
   const faq = t("faq.items", { returnObjects: true }) as any[];
   const whatItems = t("what.items", { returnObjects: true }) as string[];
   const whenItems = t("services.when", { returnObjects: true }) as string[];
+  const strengthsLeft = t("strengths.left", { returnObjects: true }) as string[];
+  const strengthsRight = t("strengths.right", { returnObjects: true }) as string[];
+
 
   return (
     <>
