@@ -290,7 +290,7 @@ export const fr = {
     mentoring: {
       title: "Mentoring",
       description:
-        "J'accompagne des fondateurs et étudiants entrepreneurs sur la stratégie GTM, la croissance commerciale et la préparation au scale — au sein des grandes écoles et écosystèmes startup.",
+        "J'accompagne des fondateurs de start-up, des dirigeants de PME et des étudiants entrepreneurs sur la stratégie GTM, la croissance commerciale et la préparation au scale — au sein des grandes écoles et écosystèmes startup.",
     },
     hervest: {
       label: "COLLECTIF D'INVESTISSEMENT",
