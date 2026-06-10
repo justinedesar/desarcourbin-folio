@@ -10,10 +10,10 @@ export const en = {
   },
   hero: {
     label: "FRACTIONAL VP SALES · OPERATING PARTNER · BUSINESS ANGEL",
-    h1_1: "Start-up Advisory",
+    h1_1: "Start-up & SME Advisory",
     h1_2: "& Operating Partner",
     tagline:
-      "I help B2B tech scale-ups build a structured and predictable revenue engine — from GTM strategy through to hands-on execution.",
+      "I help B2B tech scale-ups and established SMEs build a structured and predictable revenue engine — from GTM strategy through to hands-on execution.",
     primary: "Book a call",
     secondary: "View services →",
   },
@@ -274,7 +274,7 @@ export const en = {
       "The last chapter at SAP was about AI adoption and commercial transformation — helping mid-market organisations and their partner networks understand not just what AI tools do, but how to restructure their go-to-market around them. That shift from selling features to selling transformation is harder than it sounds. Most sales organisations aren't built for it.",
       "The coaching certification came later — ICF, Erickson — when I realised that the hardest part of scaling a sales team isn't the process. It's the people running it.",
       "I'm also an investor, active across four profiles that reflect how I think about innovation: an early-stage female-led collective focused on HealthTech and social impact, a seed-stage B2B tech fund backing the next generation of founders, a late-stage vehicle invested in global tech leaders, and a venture club backing the youngest, most ambitious entrepreneurs before anyone else sees them.",
-      "Now based in Barcelona, working with B2B scale-ups as a Fractional VP Sales.",
+      "Now based in Barcelona, working with B2B scale-ups and SMEs as a Fractional VP Sales.",
       "The through-line hasn't changed: figure out what's blocking revenue, then fix it.",
     ],
     cta: {
@@ -290,7 +290,7 @@ export const en = {
     mentoring: {
       title: "Mentoring",
       description:
-        "I mentor startup founders and entrepreneurial students on GTM strategy, revenue growth, and scale-up readiness — across leading business schools and startup ecosystems.",
+        "I mentor startup founders, SME leaders, and entrepreneurial students on GTM strategy, revenue growth, and scale-up readiness — across leading business schools and startup ecosystems.",
     },
     hervest: {
       label: "INVESTMENT COLLECTIVE",

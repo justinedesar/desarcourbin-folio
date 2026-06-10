@@ -22,7 +22,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Justine Desardurats — Fractional VP Sales, Operating Partner and Business Angel based in Barcelona. I help B2B tech scale-ups build structured, predictable revenue engines.",
+          "Justine Desardurats — Fractional VP Sales, Operating Partner and Business Angel based in Barcelona. I help B2B tech scale-ups and SMEs build structured, predictable revenue engines.",
       },
       { property: "og:title", content: "Desar Courbin · Operating and Strategic Advisory" },
       { property: "og:description", content: "Fractional VP Sales, Operating Partner & Business Angel based in Barcelona." },
