@@ -274,7 +274,7 @@ export const en = {
       "The last chapter at SAP was about AI adoption and commercial transformation — helping mid-market organisations and their partner networks understand not just what AI tools do, but how to restructure their go-to-market around them. That shift from selling features to selling transformation is harder than it sounds. Most sales organisations aren't built for it.",
       "The coaching certification came later — ICF, Erickson — when I realised that the hardest part of scaling a sales team isn't the process. It's the people running it.",
       "I'm also an investor, active across four profiles that reflect how I think about innovation: an early-stage female-led collective focused on HealthTech and social impact, a seed-stage B2B tech fund backing the next generation of founders, a late-stage vehicle invested in global tech leaders, and a venture club backing the youngest, most ambitious entrepreneurs before anyone else sees them.",
-      "Now based in Barcelona, working with B2B scale-ups as a Fractional VP Sales.",
+      "Now based in Barcelona, working with B2B scale-ups and SMEs as a Fractional VP Sales.",
       "The through-line hasn't changed: figure out what's blocking revenue, then fix it.",
     ],
     cta: {
