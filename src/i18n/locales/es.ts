@@ -290,7 +290,7 @@ export const es = {
     mentoring: {
       title: "Mentoring",
       description:
-        "Mentorizo a fundadores y estudiantes emprendedores en estrategia GTM, crecimiento comercial y preparación para el scale — en escuelas de negocios y ecosistemas startup.",
+        "Mentorizo a fundadores de start-ups, líderes de PYMEs y estudiantes emprendedores en estrategia GTM, crecimiento comercial y preparación para el scale — en escuelas de negocios y ecosistemas startup.",
     },
     hervest: {
       label: "COLECTIVO DE INVERSIÓN",
