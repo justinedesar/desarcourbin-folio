@@ -1,6 +1,5 @@
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
-import { useServerFn } from "@tanstack/react-start";
 import { submitContact } from "@/lib/contact.functions";
 import { toast } from "sonner";
 
@@ -12,7 +11,6 @@ const labelCls = "block text-xs font-medium text-text mb-1.5";
 
 export function ContactForm() {
   const { t, i18n } = useTranslation();
-  const submit = useServerFn(submitContact);
   const [loading, setLoading] = useState(false);
   const [missionTypes, setMissionTypes] = useState<string[]>([]);
 
@@ -43,7 +41,7 @@ export function ContactForm() {
       language: (i18n.language?.slice(0, 2) || "en") as "en" | "fr" | "es",
     };
     try {
-      await submit({ data: payload });
+      await submitContact(payload);
       toast.success(f.successMsg);
       form.reset();
       setMissionTypes([]);

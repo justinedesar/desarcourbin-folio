@@ -10,7 +10,7 @@ export const es = {
   },
   hero: {
     label: "FRACTIONAL VP SALES · OPERATING PARTNER · BUSINESS ANGEL",
-    h1_1: "Start-up Advisory",
+    h1_1: "Start-up & PYME Advisory",
     h1_2: "& Operating Partner",
     tagline:
       "Ayudo a scale-ups B2B tech a construir un motor de ingresos estructurado y predecible — desde la estrategia GTM hasta la ejecución.",
@@ -69,6 +69,19 @@ export const es = {
           "Auditorías y recomendaciones de procesos",
         ],
         outcome: "Mejores tasas de cierre, ciclos más cortos, equipos sólidos",
+      },
+      {
+        title: "Apertura de mercado y nuevos clientes",
+        subtitle: "Conquista nuevos territorios",
+        description:
+          "Ejecución comercial senior en un nuevo territorio — de cero a los primeros logos firmados, antes de construir un equipo dedicado.",
+        includes: [
+          "Definición del territorio objetivo, ICP y cuentas prioritarias",
+          "Prospección activa y cualificación de oportunidades",
+          "Gestión completa de ciclos de venta complejos",
+          "Cierre de primeros clientes y traspaso con documentación de pipeline",
+        ],
+        outcome: "Primeros ingresos probados en un nuevo mercado, sin contratación senior prematura",
       },
     ],
     outcomeLabel: "RESULTADO",
@@ -191,7 +204,7 @@ export const es = {
     items: [
       {
         q: "¿Con qué tipo de empresas trabajas?",
-        a: "Mis servicios están diseñados para empresas B2B tech a partir de la Serie A — cuando la función comercial necesita estructura, liderazgo y ejecución escalable. También invierto en etapas más tempranas (Seed, pre-seed), lo que significa que entiendo de dónde vienes y lo que se necesita para llegar al siguiente nivel.",
+        a: "Mis servicios están diseñados para PYME y empresas B2B tech a partir de la Serie A — cuando la función comercial necesita estructura, liderazgo y ejecución escalable. También invierto en etapas más tempranas (Seed, pre-seed), lo que significa que entiendo de dónde vienes y lo que se necesita para llegar al siguiente nivel.",
       },
       {
         q: "¿Cómo funciona el modelo Fractional VP Sales?",

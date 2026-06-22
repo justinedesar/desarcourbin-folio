@@ -2,10 +2,11 @@ import { useTranslation } from "react-i18next";
 import { Link } from "@tanstack/react-router";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/logo_desar_courbin.svg";
+import logo from "@/assets/logo Desar Courbin_horizontal_v.png";
 
 const LANGS = ["en", "fr", "es"] as const;
 const CALENDLY = "https://calendly.com/justine-desar/30min";
+const BASE = import.meta.env.BASE_URL.replace(/\/$/, ""); // e.g. "" or "/desarcourbin-folio"
 
 export function Header() {
   const { t, i18n } = useTranslation();
@@ -19,11 +20,11 @@ export function Header() {
   }, []);
 
   const sections = [
-    { href: "/#services", label: t("nav.services"), type: "anchor" as const },
-    { href: "/#experience", label: t("nav.experience"), type: "anchor" as const },
+    { href: `${BASE}/#services`, label: t("nav.services"), type: "anchor" as const },
+    { href: `${BASE}/#experience`, label: t("nav.experience"), type: "anchor" as const },
     { href: "/projects", label: t("nav.projects"), type: "route" as const },
     { href: "/about", label: t("nav.about"), type: "route" as const },
-    { href: "/#contact", label: t("nav.contact"), type: "anchor" as const },
+    { href: `${BASE}/#contact`, label: t("nav.contact"), type: "anchor" as const },
   ];
 
   return (
@@ -35,7 +36,7 @@ export function Header() {
     >
       <div className="mx-auto max-w-7xl h-full px-6 flex items-center justify-between">
         <Link to="/" className="flex items-center" aria-label="Desar Courbin home">
-          <img src={logo} alt="Desar Courbin" className="h-11 w-auto" />
+          <img src={logo} alt="Desar Courbin" className="h-[66px] w-auto" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
@@ -80,6 +81,14 @@ export function Header() {
               </button>
             ))}
           </div>
+          <a
+            href={`${import.meta.env.BASE_URL}CV_Justine_Desardurats_June_2026.pdf`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-accent border border-accent px-4 py-2 rounded-md hover:bg-accent hover:text-white transition-colors"
+          >
+            CV
+          </a>
           <a
             href={CALENDLY}
             target="_blank"

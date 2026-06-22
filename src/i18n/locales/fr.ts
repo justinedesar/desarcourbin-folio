@@ -10,7 +10,7 @@ export const fr = {
   },
   hero: {
     label: "FRACTIONAL VP SALES · OPERATING PARTNER · BUSINESS ANGEL",
-    h1_1: "Start-up Advisory",
+    h1_1: "Start-up, PME, ETI Advisory",
     h1_2: "& Operating Partner",
     tagline:
       "J'aide les scale-ups B2B tech à construire un moteur de revenus structuré et prévisible — de la stratégie GTM jusqu'à l'exécution terrain.",
@@ -69,6 +69,19 @@ export const fr = {
           "Audits & recommandations des processus",
         ],
         outcome: "Meilleurs taux de conversion, cycles accélérés, équipes renforcées",
+      },
+      {
+        title: "Ouverture de marché & nouveaux comptes",
+        subtitle: "Conquérir de nouveaux territoires",
+        description:
+          "Exécution commerciale senior sur un nouveau territoire — de zéro aux premiers logos signés, avant la constitution d'une équipe dédiée.",
+        includes: [
+          "Définition du territoire cible, de l'ICP et des comptes prioritaires",
+          "Prospection active & qualification des opportunités",
+          "Pilotage complet des cycles de vente complexes",
+          "Closing des premiers comptes & transfert avec documentation pipeline",
+        ],
+        outcome: "Premiers revenus prouvés sur un nouveau marché, sans recrutement senior prématuré",
       },
     ],
     outcomeLabel: "RÉSULTAT",
@@ -191,7 +204,7 @@ export const fr = {
     items: [
       {
         q: "Avec quel type d'entreprises travaillez-vous ?",
-        a: "Mes services s'adressent aux entreprises B2B tech à partir de la Série A — lorsque la fonction commerciale a besoin de structure, de leadership et d'une exécution scalable. J'investis également à des stades plus précoces (Seed, pre-seed), ce qui signifie que je comprends d'où vous venez et ce qu'il faut pour passer au niveau suivant.",
+        a: "Mes services s'adressent aux PME, ETI et aux entreprises B2B tech à partir de la Série A — lorsque la fonction commerciale a besoin de structure, de leadership et d'une exécution scalable. J'investis également à des stades plus précoces (Seed, pre-seed), ce qui signifie que je comprends d'où vous venez et ce qu'il faut pour passer au niveau suivant.",
       },
       {
         q: "Comment fonctionne le modèle Fractional VP Sales ?",

@@ -1,0 +1,180 @@
+{
+  "services": [
+    {
+      "id": "revenue-engine",
+      "title": {
+        "en": "Revenue Engine Build",
+        "fr": "Construction du Moteur de Revenus",
+        "es": "Construcción del Motor de Ingresos"
+      },
+      "description": {
+        "en": "Build the foundation for scalable, predictable revenue from the ground up.",
+        "fr": "Construire les fondations d'un revenu scalable et prévisible.",
+        "es": "Construir los cimientos de un motor de ingresos escalable y predecible."
+      },
+      "includes": {
+        "en": [
+          "Define ICP (Ideal Customer Profile) & value proposition",
+          "Design GTM & channel strategy",
+          "Structure sales processes & tooling",
+          "Build org design & support hiring"
+        ],
+        "fr": [
+          "Définition de l'ICP (Profil Client Idéal) & proposition de valeur",
+          "Conception de la stratégie GTM & canaux de distribution",
+          "Structuration des processus de vente & outils",
+          "Design organisationnel & support au recrutement"
+        ],
+        "es": [
+          "Definición del ICP (Perfil de Cliente Ideal) y propuesta de valor",
+          "Diseño de estrategia GTM y canales de distribución",
+          "Estructuración de procesos de ventas y herramientas",
+          "Diseño organizacional y apoyo en contratación"
+        ]
+      },
+      "outcome": {
+        "en": "A structured, repeatable, scalable revenue engine.",
+        "fr": "Un moteur de revenus structuré, répétable et scalable.",
+        "es": "Un motor de ingresos estructurado, repetible y escalable."
+      },
+      "best_for": {
+        "en": "Founders transitioning from founder-led sales · Companies entering new markets · Organisations preparing for fundraising",
+        "fr": "Fondateurs en transition depuis une vente founder-led · Entreprises entrant sur de nouveaux marchés · Organisations se préparant à une levée de fonds",
+        "es": "Fundadores en transición desde ventas founder-led · Empresas que entran en nuevos mercados · Organizaciones preparándose para una ronda de financiación"
+      },
+      "pricing": "Project-based · Typically from €5,000 / project depending on scope"
+    },
+    {
+      "id": "fractional-vp-sales",
+      "title": {
+        "en": "Fractional VP Sales",
+        "fr": "VP Sales Fractionnel",
+        "es": "VP de Ventas Fraccionado"
+      },
+      "description": {
+        "en": "Senior sales leadership without the full-time cost — embedded in your team, driving results.",
+        "fr": "Un leadership commercial senior sans le coût d'un recrutement à plein temps — intégré à votre équipe, orienté résultats.",
+        "es": "Liderazgo comercial senior sin el coste de una contratación a tiempo completo — integrado en tu equipo, orientado a resultados."
+      },
+      "includes": {
+        "en": [
+          "Own full GTM execution",
+          "Build & lead sales teams",
+          "Manage pipeline & forecast",
+          "Align sales, marketing & product"
+        ],
+        "fr": [
+          "Pilotage complet de l'exécution GTM",
+          "Construction & management des équipes de vente",
+          "Gestion du pipeline & des prévisions de revenus",
+          "Alignement ventes, marketing & produit"
+        ],
+        "es": [
+          "Ejecución completa del GTM",
+          "Construcción y liderazgo de equipos de ventas",
+          "Gestión del pipeline y previsión de ingresos",
+          "Alineación entre ventas, marketing y producto"
+        ]
+      },
+      "outcome": {
+        "en": "Executive-level execution and leadership, on a flexible engagement model.",
+        "fr": "Une exécution et un leadership de niveau Directeur Commercial, sur un modèle d'engagement flexible.",
+        "es": "Ejecución y liderazgo de nivel Director Comercial, con un modelo de compromiso flexible."
+      },
+      "best_for": {
+        "en": "Series B+ scale-ups · Companies scaling to enterprise deals · Teams building or activating partner channels",
+        "fr": "Scale-ups Series B+ · Entreprises développant des deals Enterprise · Équipes activant des canaux partenaires",
+        "es": "Scale-ups Serie B+ · Empresas escalando hacia deals Enterprise · Equipos activando canales de partners"
+      },
+      "pricing": "Monthly retainer · From €6,000 / month (part-time) · Full engagement on request"
+    },
+    {
+      "id": "sales-enablement",
+      "title": {
+        "en": "Sales Enablement & Coaching",
+        "fr": "Formation & Coaching Commercial",
+        "es": "Habilitación Comercial y Coaching"
+      },
+      "description": {
+        "en": "Elevate your team's performance and close bigger deals, faster.",
+        "fr": "Améliorer la performance de vos équipes et conclure des deals plus importants, plus rapidement.",
+        "es": "Elevar el rendimiento de tu equipo y cerrar deals más grandes, más rápido."
+      },
+      "includes": {
+        "en": [
+          "Coach founders & sales leaders",
+          "Improve enterprise sales skills & methodologies",
+          "Support on strategic deals",
+          "Sales process audits & recommendations"
+        ],
+        "fr": [
+          "Coaching de fondateurs & leaders commerciaux",
+          "Amélioration des compétences en vente enterprise",
+          "Accompagnement sur des deals stratégiques",
+          "Audits & recommandations des processus de vente"
+        ],
+        "es": [
+          "Coaching a fundadores y líderes comerciales",
+          "Mejora de habilidades y metodologías de ventas enterprise",
+          "Acompañamiento en deals estratégicos",
+          "Auditorías y recomendaciones de procesos de ventas"
+        ]
+      },
+      "outcome": {
+        "en": "Higher win rates, faster sales cycles, stronger team capabilities.",
+        "fr": "Meilleurs taux de conversion, cycles de vente accélérés, équipes renforcées.",
+        "es": "Mejores tasas de cierre, ciclos de venta más cortos, equipos más sólidos."
+      },
+      "best_for": {
+        "en": "Founders stepping into enterprise sales · Sales leaders looking to level up · Teams facing complex, long-cycle deals",
+        "fr": "Fondateurs abordant la vente enterprise · Leaders commerciaux souhaitant progresser · Équipes confrontées à des cycles de vente longs et complexes",
+        "es": "Fundadores abordando la venta enterprise · Líderes comerciales que quieren avanzar · Equipos con ciclos de venta complejos y largos"
+      },
+      "pricing": "Hourly or package-based · From €300 / hour · Discovery session complimentary (30 min)"
+    },
+    {
+      "id": "market-entry",
+      "title": {
+        "en": "Market Entry & New Business",
+        "fr": "Ouverture de marché & nouveaux comptes",
+        "es": "Apertura de mercado y nuevos clientes"
+      },
+      "description": {
+        "en": "Senior sales execution on a new territory — from zero to first signed logos, before you hire a dedicated team.",
+        "fr": "Exécution commerciale senior sur un nouveau territoire — de zéro aux premiers logos signés, avant la constitution d'une équipe dédiée.",
+        "es": "Ejecución comercial senior en un nuevo territorio — de cero a los primeros logos firmados, antes de construir un equipo dedicado."
+      },
+      "includes": {
+        "en": [
+          "Define target territory, ICP & priority accounts",
+          "Active prospecting and opportunity qualification",
+          "Lead complex sales cycles end-to-end (multi-stakeholder, enterprise)",
+          "Close first logos and hand off with full pipeline documentation"
+        ],
+        "fr": [
+          "Définition du territoire cible, de l'ICP et des comptes prioritaires",
+          "Prospection active et qualification des opportunités",
+          "Pilotage complet des cycles de vente complexes (multi-interlocuteurs, enterprise)",
+          "Closing des premiers comptes et transfert avec documentation pipeline complète"
+        ],
+        "es": [
+          "Definición del territorio objetivo, ICP y cuentas prioritarias",
+          "Prospección activa y cualificación de oportunidades",
+          "Gestión completa de ciclos de venta complejos (multi-interlocutor, enterprise)",
+          "Cierre de primeros clientes y traspaso con documentación de pipeline completa"
+        ]
+      },
+      "outcome": {
+        "en": "Proven first revenue on a new market, without the risk of a premature senior hire.",
+        "fr": "Premiers revenus prouvés sur un nouveau marché, sans le risque d'un recrutement senior prématuré.",
+        "es": "Primeros ingresos probados en un nuevo mercado, sin el riesgo de una contratación senior prematura."
+      },
+      "best_for": {
+        "en": "Companies launching in a new geography or segment · Scale-ups testing enterprise demand before building a local team · Founders who need a senior closer, not a junior rep",
+        "fr": "Entreprises lançant une nouvelle zone géographique ou un nouveau segment · Scale-ups testant la demande enterprise avant de constituer une équipe locale · Fondateurs ayant besoin d'un senior capable de closer",
+        "es": "Empresas lanzando en una nueva geografía o segmento · Scale-ups que testean la demanda enterprise antes de construir un equipo local · Fundadores que necesitan un senior capaz de cerrar"
+      },
+      "pricing": "Project-based or short retainer · Typically 3–6 months"
+    }
+  ]
+}

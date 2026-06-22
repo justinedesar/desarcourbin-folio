@@ -10,7 +10,7 @@ export const en = {
   },
   hero: {
     label: "FRACTIONAL VP SALES · OPERATING PARTNER · BUSINESS ANGEL",
-    h1_1: "Start-up Advisory",
+    h1_1: "Start-up & SME Advisory",
     h1_2: "& Operating Partner",
     tagline:
       "I help B2B tech scale-ups build a structured and predictable revenue engine — from GTM strategy through to hands-on execution.",
@@ -69,6 +69,19 @@ export const en = {
           "Sales process audits & recommendations",
         ],
         outcome: "Higher win rates, faster sales cycles, stronger teams",
+      },
+      {
+        title: "Market Entry & New Business",
+        subtitle: "Open new territories & win first logos",
+        description:
+          "Senior sales execution on a new territory — from zero to first signed logos, before you hire a dedicated team.",
+        includes: [
+          "Define target territory, ICP & priority accounts",
+          "Active prospecting & opportunity qualification",
+          "Lead complex sales cycles end-to-end",
+          "Close first logos & hand off with full pipeline documentation",
+        ],
+        outcome: "Proven first revenue on a new market, without a premature senior hire",
       },
     ],
     outcomeLabel: "OUTCOME",
@@ -191,7 +204,7 @@ export const en = {
     items: [
       {
         q: "What types of companies do you work with?",
-        a: "My services are designed for B2B tech companies from Series A onwards — when the commercial function needs structure, leadership, and scalable execution. I also invest at earlier stages (Seed, pre-seed), which means I understand where you've come from and what it takes to get to the next level.",
+        a: "My services are designed for SMEs and B2B tech companies from Series A onwards — when the commercial function needs structure, leadership, and scalable execution. I also invest at earlier stages (Seed, pre-seed), which means I understand where you've come from and what it takes to get to the next level.",
       },
       {
         q: "How does the Fractional VP Sales model work?",

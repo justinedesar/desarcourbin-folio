@@ -1,6 +1,5 @@
-import { createServerFn } from "@tanstack/react-start";
+import { supabase } from "@/integrations/supabase/client";
 import { z } from "zod";
-import { supabaseAdmin } from "@/integrations/supabase/client.server";
 
 const schema = z.object({
   full_name: z.string().trim().min(1).max(120),
@@ -22,13 +21,12 @@ const schema = z.object({
   language: z.enum(["en", "fr", "es"]).default("en"),
 });
 
-export const submitContact = createServerFn({ method: "POST" })
-  .inputValidator((data: unknown) => schema.parse(data))
-  .handler(async ({ data }) => {
-    const { error } = await supabaseAdmin.from("contact_submissions").insert(data);
-    if (error) {
-      console.error("contact_submissions insert error:", error);
-      throw new Error("Failed to submit");
-    }
-    return { ok: true };
-  });
+export async function submitContact(data: unknown): Promise<{ ok: boolean }> {
+  const validated = schema.parse(data);
+  const { error } = await supabase.from("contact_submissions").insert(validated);
+  if (error) {
+    console.error("contact_submissions insert error:", error);
+    throw new Error("Failed to submit");
+  }
+  return { ok: true };
+}

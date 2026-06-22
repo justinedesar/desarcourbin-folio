@@ -1,11 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=DM+Sans:wght@300;400;500;600&display=swap');
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=DM+Sans:wght@300;400;500;600&display=swap');
-
 @theme inline {
-  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+  --font-serif: "Marcellus", ui-serif, Georgia, serif;
   --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
 
   --color-bg: var(--bg);
@@ -42,13 +41,13 @@
 
 :root {
   --bg: #F5F7F4;
-  --accent: #2E6B4F;
+  --accent: #2E4F3E;
   --accent-light: #7DBFA0;
   --text: #1A1A18;
   --text-muted: #4A4A42;
   --border: #D5DDD6;
   --card: #FFFFFF;
-  --dark: #1A1A18;
+  --dark: #2A3D35;
 }
 
 @layer base {

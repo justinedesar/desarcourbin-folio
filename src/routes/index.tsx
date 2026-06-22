@@ -121,7 +121,6 @@ function Home() {
           <div className="mx-auto max-w-7xl grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
             {whatItems.map((item, i) => (
               <Reveal key={i} delay={i * 0.1}>
-                <div className="font-serif text-accent-light text-sm">{String(i + 1).padStart(2, "0")}</div>
                 <div className="h-[2px] w-8 bg-accent my-3" />
                 <p className="text-sm md:text-base text-white leading-relaxed">{item}</p>
               </Reveal>
@@ -137,35 +136,65 @@ function Home() {
             <div className="label-eyebrow mb-3">{t("services.label")}</div>
             <h2 className="text-4xl md:text-5xl mb-16 text-text">{t("services.title")}</h2>
           </Reveal>
-          <div className="grid md:grid-cols-3 gap-6">
-            {cards.map((c, i) => (
-              <Reveal key={i} delay={i * 0.1}>
-                <article className="bg-card border-hair border-border rounded-lg p-8 h-full hover:border-accent transition-colors">
-                  <div className="label-eyebrow">{String(i + 1).padStart(2, "0")}</div>
-                  <div className="h-[2px] w-8 bg-accent my-4" />
-                  <h3 className="font-serif text-2xl mb-2 text-text">{c.title}</h3>
-                  <div className="label-eyebrow mb-5">{c.subtitle}</div>
-                  <p className="text-sm text-text-muted leading-relaxed mb-6">{c.description}</p>
-                  <div className="border-t-hair border-border pt-5 space-y-2 mb-6">
-                    {c.includes.map((inc: string) => (
-                      <div key={inc} className="flex items-start gap-2 text-[13px] text-text">
-                        <span className="mt-1.5 w-1.5 h-1.5 bg-accent rounded-full flex-shrink-0" />
-                        <span>{inc}</span>
+          {(() => {
+            const n = cards.length;
+            const cols = n <= 3 ? Math.max(n, 1) : n % 3 === 0 ? 3 : n % 2 === 0 ? 2 : 3;
+            const remainder = n % cols;
+            const fullCount = remainder === 0 ? n : n - remainder;
+            const gridColClass = cols === 1 ? "" : cols === 2 ? "md:grid-cols-2" : "md:grid-cols-3";
+            const lastCardClass = cols === 2 ? "w-full md:w-[calc(50%-12px)]" : "w-full md:w-[calc(33.333%-16px)]";
+
+            const renderCard = (c: any, i: number) => (
+              <article className="bg-card border-hair border-border rounded-lg p-8 h-full hover:border-accent transition-colors">
+                <div className="label-eyebrow">{String(i + 1).padStart(2, "0")}</div>
+                <div className="h-[2px] w-8 bg-accent my-4" />
+                <h3 className="font-serif text-2xl mb-2 text-text">{c.title}</h3>
+                <div className="label-eyebrow mb-5">{c.subtitle}</div>
+                <p className="text-sm text-text-muted leading-relaxed mb-6">{c.description}</p>
+                <div className="border-t-hair border-border pt-5 space-y-2 mb-6">
+                  {c.includes.map((inc: string) => (
+                    <div key={inc} className="flex items-start gap-2 text-[13px] text-text">
+                      <span className="mt-1.5 w-1.5 h-1.5 bg-accent rounded-full flex-shrink-0" />
+                      <span>{inc}</span>
+                    </div>
+                  ))}
+                </div>
+                <div className="border-t-hair border-border pt-4">
+                  <div className="label-eyebrow mb-1">{t("services.outcomeLabel")}</div>
+                  <p className="text-sm italic text-text-muted">{c.outcome}</p>
+                </div>
+              </article>
+            );
+
+            return (
+              <div className="space-y-6">
+                {fullCount > 0 && (
+                  <div className={`grid gap-6 ${gridColClass}`}>
+                    {cards.slice(0, fullCount).map((c, i) => (
+                      <Reveal key={i} delay={i * 0.1}>
+                        {renderCard(c, i)}
+                      </Reveal>
+                    ))}
+                  </div>
+                )}
+                {remainder > 0 && (
+                  <div className="flex justify-center gap-6">
+                    {cards.slice(fullCount).map((c, i) => (
+                      <div key={fullCount + i} className={lastCardClass}>
+                        <Reveal delay={(fullCount + i) * 0.1}>
+                          {renderCard(c, fullCount + i)}
+                        </Reveal>
                       </div>
                     ))}
                   </div>
-                  <div className="border-t-hair border-border pt-4">
-                    <div className="label-eyebrow mb-1">{t("services.outcomeLabel")}</div>
-                    <p className="text-sm italic text-text-muted">{c.outcome}</p>
-                  </div>
-                </article>
-              </Reveal>
-            ))}
-          </div>
+                )}
+              </div>
+            );
+          })()}
         </div>
         <div className="mt-20 bg-dark text-bg py-12 px-6 -mx-6">
           <div className="mx-auto max-w-7xl">
-            <div className="label-eyebrow text-accent-light mb-6">{t("services.whenLabel")}</div>
+            <div className="label-eyebrow !text-white !font-bold mb-6">{t("services.whenLabel")}</div>
             <div className="flex flex-wrap gap-x-8 gap-y-4">
               {whenItems.map((w, i) => (
                 <div key={i} className="flex items-center gap-2 text-sm text-bg">
@@ -238,7 +267,6 @@ function Home() {
       <section id="experience" className="py-24 md:py-32 px-6 bg-bg">
         <div className="mx-auto max-w-7xl">
           <Reveal>
-            <div className="label-eyebrow mb-3">{t("experience.label")}</div>
             <h2 className="text-4xl md:text-5xl mb-10 text-text">{t("experience.title")}</h2>
           </Reveal>
           <Reveal>
@@ -326,7 +354,6 @@ function Home() {
       <section id="investment" className="bg-dark text-bg py-24 md:py-32 px-6">
         <div className="mx-auto max-w-7xl">
           <Reveal>
-            <div className="label-eyebrow text-accent-light mb-3">{t("investment.label")}</div>
             <h2 className="text-4xl md:text-5xl mb-16 text-bg font-serif">{t("investor.section.title")}</h2>
           </Reveal>
           <div className="grid md:grid-cols-2 gap-6">
