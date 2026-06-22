@@ -10,10 +10,10 @@ export const fr = {
   },
   hero: {
     label: "FRACTIONAL VP SALES · OPERATING PARTNER · BUSINESS ANGEL",
-    h1_1: "Start-up, PME, ETI Advisory",
+    h1_1: "Start-up & PME Advisory",
     h1_2: "& Operating Partner",
     tagline:
-      "J'aide les scale-ups B2B tech à construire un moteur de revenus structuré et prévisible — de la stratégie GTM jusqu'à l'exécution terrain.",
+      "J'aide les scale-ups B2B tech et les PME établies à construire un moteur de revenus structuré et prévisible — de la stratégie GTM jusqu'à l'exécution terrain.",
     primary: "Réserver un call",
     secondary: "Voir les services →",
   },
@@ -287,7 +287,7 @@ export const fr = {
       "Le dernier chapitre chez SAP portait sur l'adoption de l'IA et la transformation commerciale — aider les organisations mid-market et leurs réseaux partenaires à comprendre non seulement ce que font les outils IA, mais comment restructurer leur go-to-market autour d'eux. Ce glissement — passer de la vente de fonctionnalités à la vente de transformation — est plus difficile qu'il n'y paraît. La plupart des organisations commerciales n'y sont pas préparées.",
       "La certification coaching est venue plus tard — ICF, Erickson — quand j'ai compris que la partie la plus difficile dans la montée en puissance d'une équipe commerciale, ce n'est pas le process. C'est les gens qui le font tourner.",
       "Je suis également investisseuse, active sur quatre profils qui reflètent ma façon de penser l'innovation : un collectif early-stage piloté par des femmes centré sur la HealthTech et l'impact social, un fonds seed B2B tech aux côtés de la prochaine génération de fondateurs, un véhicule late-stage investi dans les leaders tech mondiaux, et un club venture qui soutient les entrepreneurs les plus ambitieux avant que quiconque ne les ait repérés.",
-      "Aujourd'hui basée à Barcelone, j'interviens auprès de scale-ups B2B en tant que Fractional VP Sales.",
+      "Aujourd'hui basée à Barcelone, j'interviens auprès de scale-ups B2B et de PME en tant que Fractional VP Sales.",
       "Le fil rouge n'a pas changé : identifier ce qui bloque le revenu, puis le débloquer.",
     ],
     cta: {
@@ -303,7 +303,7 @@ export const fr = {
     mentoring: {
       title: "Mentoring",
       description:
-        "J'accompagne des fondateurs et étudiants entrepreneurs sur la stratégie GTM, la croissance commerciale et la préparation au scale — au sein des grandes écoles et écosystèmes startup.",
+        "J'accompagne des fondateurs de start-up, des dirigeants de PME et des étudiants entrepreneurs sur la stratégie GTM, la croissance commerciale et la préparation au scale — au sein des grandes écoles et écosystèmes startup.",
     },
     hervest: {
       label: "COLLECTIF D'INVESTISSEMENT",

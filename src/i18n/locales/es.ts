@@ -13,7 +13,7 @@ export const es = {
     h1_1: "Start-up & PYME Advisory",
     h1_2: "& Operating Partner",
     tagline:
-      "Ayudo a scale-ups B2B tech a construir un motor de ingresos estructurado y predecible — desde la estrategia GTM hasta la ejecución.",
+      "Ayudo a scale-ups B2B tech y PYMEs consolidadas a construir un motor de ingresos estructurado y predecible — desde la estrategia GTM hasta la ejecución.",
     primary: "Reservar llamada",
     secondary: "Ver servicios →",
   },
@@ -287,7 +287,7 @@ export const es = {
       "El último capítulo en SAP fue sobre la adopción de la IA y la transformación comercial — ayudando a organizaciones mid-market y sus redes de partners a entender no solo qué hacen las herramientas de IA, sino cómo restructurar su go-to-market alrededor de ellas. Ese cambio — pasar de vender funcionalidades a vender transformación — es más difícil de lo que parece. La mayoría de las organizaciones comerciales no están preparadas para ello.",
       "La certificación de coaching llegó más tarde — ICF, Erickson — cuando me di cuenta de que la parte más difícil de escalar un equipo de ventas no es el proceso. Son las personas que lo hacen funcionar.",
       "También soy inversora, activa en cuatro perfiles que reflejan mi forma de pensar la innovación: un colectivo early-stage liderado por mujeres enfocado en HealthTech e impacto social, un fondo seed de tech B2B junto a la próxima generación de fundadores, un vehículo late-stage invertido en líderes tecnológicos globales, y un club de venture que apoya a los emprendedores más ambiciosos antes de que nadie los haya descubierto.",
-      "Hoy basada en Barcelona, trabajo con scale-ups B2B como Fractional VP Sales.",
+      "Hoy basada en Barcelona, trabajo con scale-ups B2B y PYMEs como Fractional VP Sales.",
       "El hilo conductor no ha cambiado: identificar lo que bloquea los ingresos, y desbloquearlo.",
     ],
     cta: {
@@ -303,7 +303,7 @@ export const es = {
     mentoring: {
       title: "Mentoring",
       description:
-        "Mentorizo a fundadores y estudiantes emprendedores en estrategia GTM, crecimiento comercial y preparación para el scale — en escuelas de negocios y ecosistemas startup.",
+        "Mentorizo a fundadores de start-ups, líderes de PYMEs y estudiantes emprendedores en estrategia GTM, crecimiento comercial y preparación para el scale — en escuelas de negocios y ecosistemas startup.",
     },
     hervest: {
       label: "COLECTIVO DE INVERSIÓN",
