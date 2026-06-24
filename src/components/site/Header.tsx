@@ -128,7 +128,17 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="md:hidden fixed inset-0 top-16 bg-dark z-[100] px-6 py-6 flex flex-col">
+        <div
+          className="md:hidden fixed px-6 py-6 flex flex-col"
+          style={{
+            top: 64,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            background: "#2A3D35",
+            zIndex: 100,
+          }}
+        >
           <nav className="flex flex-col divide-y divide-white/10">
             <Link to="/" className="text-base py-4 text-white/90 hover:text-accent-light transition-colors" onClick={() => setOpen(false)}>
               {t("nav.home")}
