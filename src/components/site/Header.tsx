@@ -131,12 +131,14 @@ export function Header() {
         <div
           className="md:hidden fixed px-6 py-6 flex flex-col"
           style={{
+            position: "fixed",
             top: 64,
             left: 0,
             right: 0,
-            bottom: 0,
+            height: "calc(100dvh - 64px)",
             background: "#2A3D35",
             zIndex: 100,
+            overflowY: "auto",
           }}
         >
           <nav className="flex flex-col divide-y divide-white/10">
