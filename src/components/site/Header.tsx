@@ -128,9 +128,9 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="md:hidden fixed inset-0 top-16 bg-bg z-[100] px-6 py-6 flex flex-col border-t-hair border-border overflow-y-auto">
-          <nav className="flex flex-col divide-y divide-border/50">
-            <Link to="/" className="text-base py-4 text-text" onClick={() => setOpen(false)}>
+        <div className="md:hidden fixed inset-0 top-16 bg-dark z-[100] px-6 py-6 flex flex-col">
+          <nav className="flex flex-col divide-y divide-white/10">
+            <Link to="/" className="text-base py-4 text-white/90 hover:text-accent-light transition-colors" onClick={() => setOpen(false)}>
               {t("nav.home")}
             </Link>
             {sections.map((s) =>
@@ -138,7 +138,7 @@ export function Header() {
                 <Link
                   key={s.href}
                   to={s.href}
-                  className="text-base py-4 text-text"
+                  className="text-base py-4 text-white/90 hover:text-accent-light transition-colors"
                   onClick={() => setOpen(false)}
                 >
                   {s.label}
@@ -147,7 +147,7 @@ export function Header() {
                 <a
                   key={s.href}
                   href={s.href}
-                  className="text-base py-4 text-text"
+                  className="text-base py-4 text-white/90 hover:text-accent-light transition-colors"
                   onClick={() => setOpen(false)}
                 >
                   {s.label}
@@ -159,7 +159,7 @@ export function Header() {
             href={CALENDLY}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-accent text-white text-center py-3 rounded-md mt-6 text-sm"
+            className="bg-accent-light text-dark text-center py-3 rounded-md mt-6 text-sm font-medium"
           >
             {t("nav.book")}
           </a>
