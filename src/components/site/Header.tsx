@@ -99,59 +99,67 @@ export function Header() {
           </a>
         </div>
 
-        <button
-          className="md:hidden p-2"
-          onClick={() => setOpen(!open)}
-          aria-label="Menu"
-        >
-          {open ? <X size={22} /> : <Menu size={22} />}
-        </button>
-      </div>
-
-      {open && (
-        <div className="md:hidden fixed inset-0 top-16 bg-bg z-[100] px-6 py-8 flex flex-col gap-6 border-t-hair border-border overflow-y-auto">
-          <Link to="/" className="text-lg" onClick={() => setOpen(false)}>
-            {t("nav.home")}
-          </Link>
-          {sections.map((s) =>
-            s.type === "route" ? (
-              <Link
-                key={s.href}
-                to={s.href}
-                className="text-lg"
-                onClick={() => setOpen(false)}
-              >
-                {s.label}
-              </Link>
-            ) : (
-              <a
-                key={s.href}
-                href={s.href}
-                className="text-lg"
-                onClick={() => setOpen(false)}
-              >
-                {s.label}
-              </a>
-            )
-          )}
-          <div className="flex gap-4 pt-4 border-t-hair border-border">
-            {LANGS.map((l) => (
+        {/* Mobile: langue toujours visible + hamburger */}
+        <div className="md:hidden flex items-center gap-3">
+          <div className="flex items-center gap-1.5 text-[11px]">
+            {LANGS.map((l, i) => (
               <button
                 key={l}
                 onClick={() => i18n.changeLanguage(l)}
-                className={`uppercase text-sm ${
-                  i18n.language?.startsWith(l) ? "text-accent font-semibold" : "text-text-muted"
+                className={`uppercase tracking-wider transition-colors ${
+                  i18n.language?.startsWith(l)
+                    ? "text-accent font-semibold"
+                    : "text-text-muted hover:text-text"
                 }`}
               >
                 {l}
+                {i < LANGS.length - 1 && <span className="ml-1.5 text-border">|</span>}
               </button>
             ))}
           </div>
+          <button
+            className="p-2"
+            onClick={() => setOpen(!open)}
+            aria-label="Menu"
+          >
+            {open ? <X size={22} /> : <Menu size={22} />}
+          </button>
+        </div>
+      </div>
+
+      {open && (
+        <div className="md:hidden fixed inset-0 top-16 bg-bg z-[100] px-6 py-6 flex flex-col border-t-hair border-border overflow-y-auto">
+          <nav className="flex flex-col divide-y divide-border/50">
+            <Link to="/" className="text-base py-4 text-text" onClick={() => setOpen(false)}>
+              {t("nav.home")}
+            </Link>
+            {sections.map((s) =>
+              s.type === "route" ? (
+                <Link
+                  key={s.href}
+                  to={s.href}
+                  className="text-base py-4 text-text"
+                  onClick={() => setOpen(false)}
+                >
+                  {s.label}
+                </Link>
+              ) : (
+                <a
+                  key={s.href}
+                  href={s.href}
+                  className="text-base py-4 text-text"
+                  onClick={() => setOpen(false)}
+                >
+                  {s.label}
+                </a>
+              )
+            )}
+          </nav>
           <a
             href={CALENDLY}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-accent text-white text-center py-3 rounded-md mt-4"
+            className="bg-accent text-white text-center py-3 rounded-md mt-6 text-sm"
           >
             {t("nav.book")}
           </a>
