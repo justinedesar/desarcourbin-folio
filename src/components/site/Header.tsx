@@ -109,7 +109,7 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="md:hidden fixed inset-0 top-16 bg-bg z-40 px-6 py-8 flex flex-col gap-6 border-t-hair border-border">
+        <div className="md:hidden fixed inset-0 top-16 bg-bg z-[100] px-6 py-8 flex flex-col gap-6 border-t-hair border-border overflow-y-auto">
           <Link to="/" className="text-lg" onClick={() => setOpen(false)}>
             {t("nav.home")}
           </Link>
