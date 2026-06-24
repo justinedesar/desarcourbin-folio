@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "@tanstack/react-router";
-import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import logo from "@/assets/logo Desar Courbin_horizontal_v.png";
 
 const LANGS = ["en", "fr", "es"] as const;
@@ -12,6 +12,18 @@ export function Header() {
   const { t, i18n } = useTranslation();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [langOpen, setLangOpen] = useState(false);
+  const langRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (langRef.current && !langRef.current.contains(e.target as Node)) {
+        setLangOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
@@ -99,23 +111,33 @@ export function Header() {
           </a>
         </div>
 
-        {/* Mobile: langue toujours visible + hamburger */}
-        <div className="md:hidden flex items-center gap-3">
-          <div className="flex items-center gap-1.5 text-[11px]">
-            {LANGS.map((l, i) => (
-              <button
-                key={l}
-                onClick={() => i18n.changeLanguage(l)}
-                className={`uppercase tracking-wider transition-colors ${
-                  i18n.language?.startsWith(l)
-                    ? "text-accent font-semibold"
-                    : "text-text-muted hover:text-text"
-                }`}
-              >
-                {l}
-                {i < LANGS.length - 1 && <span className="ml-1.5 text-border">|</span>}
-              </button>
-            ))}
+        {/* Mobile: sélecteur langue compact + hamburger */}
+        <div className="md:hidden flex items-center gap-2">
+          <div className="relative" ref={langRef}>
+            <button
+              onClick={() => setLangOpen(!langOpen)}
+              className="flex items-center gap-1 text-[11px] uppercase tracking-wider text-accent font-semibold px-2 py-1"
+            >
+              {i18n.language?.slice(0, 2).toUpperCase()}
+              <ChevronDown size={12} className={`transition-transform ${langOpen ? "rotate-180" : ""}`} />
+            </button>
+            {langOpen && (
+              <div className="absolute right-0 top-full mt-1 bg-bg border border-border rounded-md shadow-md overflow-hidden z-[200]">
+                {LANGS.map((l) => (
+                  <button
+                    key={l}
+                    onClick={() => { i18n.changeLanguage(l); setLangOpen(false); }}
+                    className={`block w-full text-left px-4 py-2 text-[11px] uppercase tracking-wider transition-colors ${
+                      i18n.language?.startsWith(l)
+                        ? "text-accent font-semibold bg-accent/5"
+                        : "text-text-muted hover:text-text hover:bg-border/20"
+                    }`}
+                  >
+                    {l}
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
           <button
             className="p-2"
