@@ -2,7 +2,6 @@ import { useTranslation } from "react-i18next";
 import { createFileRoute } from "@tanstack/react-router";
 import { ChevronDown, ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
-import { ContactForm } from "@/components/site/ContactForm";
 import { MentoringSection } from "@/components/site/MentoringSection";
 import {
   Accordion,
@@ -463,8 +462,8 @@ function Home() {
 
       {/* CONTACT */}
       <section id="contact" className="py-24 md:py-32 px-6 bg-bg">
-        <div className="mx-auto max-w-7xl grid md:grid-cols-5 gap-12">
-          <Reveal className="md:col-span-2">
+        <div className="mx-auto max-w-xl">
+          <Reveal>
             <div className="label-eyebrow mb-3">{t("contact.label")}</div>
             <h2 className="font-serif text-4xl md:text-[42px] leading-tight mb-6 text-text">
               {t("contact.title")}
@@ -488,9 +487,6 @@ function Home() {
               <li><a href="https://linkedin.com/in/justinedesardurats" target="_blank" rel="noopener noreferrer" className="hover:text-accent">linkedin.com/in/justinedesardurats</a></li>
               <li><a href="tel:+34606846541" className="hover:text-accent">+34 606 846 541</a></li>
             </ul>
-          </Reveal>
-          <Reveal delay={0.1} className="md:col-span-3">
-            <ContactForm />
           </Reveal>
         </div>
       </section>
