@@ -238,7 +238,7 @@ export const en = {
       fullName: "Full name",
       email: "Email",
       linkedin: "LinkedIn URL",
-      company: "Company",
+      company: "Company's website",
       fundingStage: "Funding stage",
       teamSize: "Team size",
       sector: "Sector",

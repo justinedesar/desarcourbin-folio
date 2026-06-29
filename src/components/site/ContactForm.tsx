@@ -78,7 +78,7 @@ export function ContactForm() {
           </div>
           <div>
             <label className={labelCls}>{f.company} *</label>
-            <input name="company" required className={inputCls} />
+            <input name="company" type="url" required placeholder="https://..." className={inputCls} />
           </div>
         </div>
       </Block>
@@ -86,33 +86,33 @@ export function ContactForm() {
       <Block title={f.block2}>
         <div className="grid sm:grid-cols-2 gap-4">
           <div>
-            <label className={labelCls}>{f.fundingStage} *</label>
-            <select name="funding_stage" required className={inputCls}>
+            <label className={labelCls}>{f.fundingStage}</label>
+            <select name="funding_stage" className={inputCls}>
               <option value="">—</option>
               {f.fundingStages.map((o: string) => <option key={o}>{o}</option>)}
             </select>
           </div>
           <div>
-            <label className={labelCls}>{f.teamSize} *</label>
-            <select name="team_size" required className={inputCls}>
+            <label className={labelCls}>{f.teamSize}</label>
+            <select name="team_size" className={inputCls}>
               <option value="">—</option>
               {f.teamSizes.map((o: string) => <option key={o}>{o}</option>)}
             </select>
           </div>
           <div>
-            <label className={labelCls}>{f.sector} *</label>
-            <input name="sector" required className={inputCls} />
+            <label className={labelCls}>{f.sector}</label>
+            <input name="sector" className={inputCls} />
           </div>
           <div>
-            <label className={labelCls}>{f.targetMarket} *</label>
-            <input name="target_market" required className={inputCls} />
+            <label className={labelCls}>{f.targetMarket}</label>
+            <input name="target_market" className={inputCls} />
           </div>
         </div>
       </Block>
 
       <Block title={f.block3}>
         <div>
-          <label className={labelCls}>{f.missionType} *</label>
+          <label className={labelCls}>{f.missionType}</label>
           <div className="flex flex-wrap gap-2 mt-2">
             {f.missionTypes.map((m: string) => {
               const active = missionTypes.includes(m);
@@ -139,15 +139,15 @@ export function ContactForm() {
         </div>
         <div className="grid sm:grid-cols-2 gap-4">
           <div>
-            <label className={labelCls}>{f.engagement} *</label>
-            <select name="engagement" required className={inputCls}>
+            <label className={labelCls}>{f.engagement}</label>
+            <select name="engagement" className={inputCls}>
               <option value="">—</option>
               {f.engagements.map((o: string) => <option key={o}>{o}</option>)}
             </select>
           </div>
           <div>
-            <label className={labelCls}>{f.duration} *</label>
-            <select name="duration" required className={inputCls}>
+            <label className={labelCls}>{f.duration}</label>
+            <select name="duration" className={inputCls}>
               <option value="">—</option>
               {f.durations.map((o: string) => <option key={o}>{o}</option>)}
             </select>

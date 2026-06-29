@@ -238,7 +238,7 @@ export const es = {
       fullName: "Nombre completo",
       email: "Email",
       linkedin: "URL de LinkedIn",
-      company: "Empresa",
+      company: "Sitio web de la empresa",
       fundingStage: "Etapa de financiación",
       teamSize: "Tamaño de equipo",
       sector: "Sector",

@@ -5,7 +5,7 @@ const schema = z.object({
   full_name: z.string().trim().min(1).max(120),
   email: z.string().trim().email().max(200),
   linkedin_url: z.string().trim().url().max(300),
-  company: z.string().trim().min(1).max(200),
+  company: z.string().trim().url().max(200),
   funding_stage: z.string().max(60).optional().nullable(),
   team_size: z.string().max(60).optional().nullable(),
   sector: z.string().max(200).optional().nullable(),
