@@ -28,5 +28,11 @@ export async function submitContact(data: unknown): Promise<{ ok: boolean }> {
     console.error("contact_submissions insert error:", error);
     throw new Error("Failed to submit");
   }
+
+  // Fire-and-forget — DB insert already succeeded; don't block UX on email
+  supabase.functions
+    .invoke("notify-contact", { body: validated })
+    .catch((e) => console.warn("[notify-contact] email notification failed:", e));
+
   return { ok: true };
 }

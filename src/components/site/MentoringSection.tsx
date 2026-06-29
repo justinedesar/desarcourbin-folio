@@ -18,50 +18,51 @@ export function MentoringSection({ id }: MentoringSectionProps) {
   const { t } = useTranslation();
 
   return (
-    <section id={id} className="py-20 px-6 bg-bg border-t-hair border-border">
-      <div className="mx-auto max-w-4xl text-center">
-        <Reveal>
-          <h2 className="font-serif text-3xl mb-4 text-text">{t("projects.mentoring.title")}</h2>
-          <p className="text-text-muted leading-relaxed max-w-2xl mx-auto">
-            {t("projects.mentoring.description")}
-          </p>
-        </Reveal>
-        <Reveal delay={0.1}>
-          <div
-            className="flex flex-wrap justify-center"
-            style={{ gap: 32, marginTop: 48 }}
-          >
-            {MENTORING.map((m) => (
-              <a
-                key={m.name}
-                href={m.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mentoring-link"
-                style={{
-                  fontFamily: "var(--font-sans)",
-                  fontSize: 13,
-                  fontWeight: 600,
-                  color: "#2E6B4F",
-                  textDecoration: "none",
-                  borderBottom: "1px solid #2E6B4F",
-                  paddingBottom: 2,
-                  transition: "color 0.15s, border-color 0.15s",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.color = "#1A1A18";
-                  e.currentTarget.style.borderColor = "#1A1A18";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.color = "#2E6B4F";
-                  e.currentTarget.style.borderColor = "#2E6B4F";
-                }}
-              >
-                {m.name}
-              </a>
-            ))}
-          </div>
-        </Reveal>
+    <section id={id} className="py-24 md:py-32 px-6 bg-bg border-t-hair border-border">
+      <div className="mx-auto max-w-7xl">
+        <div className="grid md:grid-cols-5 gap-12 items-start">
+          <Reveal className="md:col-span-2">
+            <h2 className="font-serif text-4xl md:text-5xl text-text">
+              {t("projects.mentoring.title")}
+            </h2>
+          </Reveal>
+
+          <Reveal delay={0.1} className="md:col-span-3">
+            <p className="text-text-muted leading-relaxed mb-10">
+              {t("projects.mentoring.description")}
+            </p>
+            <div className="flex flex-wrap gap-8">
+              {MENTORING.map((m) => (
+                <a
+                  key={m.name}
+                  href={m.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    fontFamily: "var(--font-sans)",
+                    fontSize: 13,
+                    fontWeight: 600,
+                    color: "#2E6B4F",
+                    textDecoration: "none",
+                    borderBottom: "1px solid #2E6B4F",
+                    paddingBottom: 2,
+                    transition: "color 0.15s, border-color 0.15s",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.color = "#1A1A18";
+                    e.currentTarget.style.borderColor = "#1A1A18";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.color = "#2E6B4F";
+                    e.currentTarget.style.borderColor = "#2E6B4F";
+                  }}
+                >
+                  {m.name}
+                </a>
+              ))}
+            </div>
+          </Reveal>
+        </div>
       </div>
     </section>
   );

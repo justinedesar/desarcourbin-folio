@@ -253,7 +253,7 @@ export const es = {
       successField: "Criterios de éxito (opcional)",
       submit: "Enviar mi solicitud →",
       sending: "Enviando…",
-      successMsg: "Gracias — tu solicitud ha sido recibida. Te respondo en 48h.",
+      successMsg: "Gracias por contactarme. He recibido tu solicitud y me pondré en contacto contigo pronto.",
       error: "Algo salió mal. Inténtalo de nuevo o escribe a contact@desarcourbin.com.",
       required: "Requerido",
       fundingStages: ["Pre-seed", "Seed", "Serie A", "Serie B+", "PYME en crecimiento"],

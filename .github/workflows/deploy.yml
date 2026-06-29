@@ -49,3 +49,21 @@ jobs:
     steps:
       - uses: actions/deploy-pages@v4
         id: deployment
+
+  deploy-functions:
+    runs-on: ubuntu-latest
+    continue-on-error: true  # don't block Pages deploy if SUPABASE_ACCESS_TOKEN is not set
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: supabase/setup-cli@v1
+        with:
+          version: latest
+
+      - name: Deploy Edge Functions
+        run: |
+          supabase functions deploy notify-contact \
+            --project-ref bogwlwthglmggnzjsnmf \
+            --no-verify-jwt
+        env:
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}

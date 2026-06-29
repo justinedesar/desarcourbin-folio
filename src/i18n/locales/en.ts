@@ -253,7 +253,7 @@ export const en = {
       successField: "Success criteria (optional)",
       submit: "Send my request →",
       sending: "Sending…",
-      successMsg: "Thanks — your request has been received. I'll reply within 48h.",
+      successMsg: "Thank you for reaching out. I have received your request and will get back to you shortly.",
       error: "Something went wrong. Please try again or email contact@desarcourbin.com.",
       required: "Required",
       fundingStages: ["Pre-seed", "Seed", "Series A", "Series B+", "Growth SME"],
