@@ -3,6 +3,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ChevronDown, ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
 import { ContactForm } from "@/components/site/ContactForm";
+import { MentoringSection } from "@/components/site/MentoringSection";
 import {
   Accordion,
   AccordionContent,
@@ -432,6 +433,9 @@ function Home() {
         </div>
       </section>
 
+
+      {/* MENTORING */}
+      <MentoringSection id="mentoring" />
 
       {/* FAQ */}
       <section id="faq" className="py-24 md:py-32 px-6 bg-bg">
