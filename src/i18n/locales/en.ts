@@ -303,7 +303,7 @@ export const en = {
     mentoring: {
       title: "Mentoring",
       description:
-        "I mentor startup founders, SME leaders, and entrepreneurial students on GTM strategy, revenue growth, and scale-up readiness — across leading business schools and startup ecosystems.",
+        "I mentor startup founders and entrepreneurial students on GTM strategy, revenue growth, and scale-up readiness — across leading business schools and startup ecosystems.",
     },
     hervest: {
       label: "INVESTMENT COLLECTIVE",
