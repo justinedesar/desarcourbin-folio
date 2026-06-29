@@ -253,6 +253,7 @@ export const en = {
       successField: "Success criteria (optional)",
       submit: "Send my request →",
       sending: "Sending…",
+      validationTitle: "Please complete the following fields before submitting:",
       successMsg: "Thank you for reaching out. I have received your request and will get back to you shortly.",
       error: "Something went wrong. Please try again or email contact@desarcourbin.com.",
       required: "Required",
