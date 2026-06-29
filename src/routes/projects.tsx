@@ -31,6 +31,7 @@ const MENTORING = [
   { name: "AticcoLab", url: "https://aticcolab.com/" },
   { name: "Junior Achievement España", url: "https://fundacionjaes.org/programas-educativos/educacion-emprendedora/startup-programme/" },
   { name: "Start-up Turbo (ESADE)", url: "https://www.e3esade.com/startupturbo" },
+  { name: "EWA Grow 2026", url: "https://www.eitfood.eu/open-calls/call-for-empowering-women-in-agrifood-ewa-grow-programme-2026-participants" },
 ];
 
 function ProjectsPage() {
