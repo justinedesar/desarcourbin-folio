@@ -255,7 +255,7 @@ export const fr = {
       sending: "Envoi…",
       validationTitle: "Merci de compléter les champs suivants avant d'envoyer :",
       successMsg: "Merci pour votre message. J'ai bien reçu votre demande et reviendrai vers vous très prochainement.",
-      error: "Une erreur est survenue. Réessayez ou écrivez à contact@desarcourbin.com.",
+      error: "Une erreur est survenue. Réessayez ou écrivez à justine.desar@gmail.com.",
       required: "Requis",
       fundingStages: ["Pre-seed", "Seed", "Série A", "Série B+", "PME en croissance"],
       teamSizes: ["1–5", "6–15", "16–50", "50–200", "200+"],
@@ -320,9 +320,9 @@ export const fr = {
     body: `Site web : desarcourbin.com
 Responsable : Justine Desardurats
 Localisation : Barcelone, Espagne
-Email : contact@desarcourbin.com
+Email : justine.desar@gmail.com
 Téléphone : +34 606 846 541
 
-Ce site collecte des données personnelles via son formulaire de contact (nom, email, LinkedIn, informations sur l'entreprise) dans le seul but de répondre à votre demande. Les données sont stockées de manière sécurisée et ne sont jamais partagées avec des tiers. Vous pouvez demander la suppression de vos données à tout moment en écrivant à contact@desarcourbin.com.`,
+Ce site collecte des données personnelles via son formulaire de contact (nom, email, LinkedIn, informations sur l'entreprise) dans le seul but de répondre à votre demande. Les données sont stockées de manière sécurisée et ne sont jamais partagées avec des tiers. Vous pouvez demander la suppression de vos données à tout moment en écrivant à justine.desar@gmail.com.`,
   },
 };

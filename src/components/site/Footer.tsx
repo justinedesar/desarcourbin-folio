@@ -38,8 +38,8 @@ export function Footer() {
           <div className="label-eyebrow mb-4" style={{ color: "rgba(245,247,244,0.7)" }}>{t("footer.contactInfo")}</div>
           <ul className="space-y-2 text-sm">
             <li>
-              <a href="mailto:contact@desarcourbin.com" className="hover:text-accent-light">
-                contact@desarcourbin.com
+              <a href="mailto:justine.desar@gmail.com" className="hover:text-accent-light">
+                justine.desar@gmail.com
               </a>
             </li>
             <li>

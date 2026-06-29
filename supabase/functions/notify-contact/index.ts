@@ -1,8 +1,6 @@
-// TODO: once desarcourbin.com domain is live and verified in Resend, replace both
-// TO_EMAIL and FROM_EMAIL with the production addresses.
 const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY") ?? "";
-const TO_EMAIL = "justine.desar@gmail.com"; // temp — replace with contact@desarcourbin.com
-const FROM_EMAIL = "onboarding@resend.dev"; // temp — replace with contact@desarcourbin.com
+const TO_EMAIL = "justine.desar@gmail.com";
+const FROM_EMAIL = "onboarding@resend.dev";
 
 const CORS = {
   "Access-Control-Allow-Origin": "*",

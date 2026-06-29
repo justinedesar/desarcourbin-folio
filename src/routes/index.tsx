@@ -484,7 +484,7 @@ function Home() {
               <div className="flex-1 h-[0.5px] bg-border" />
             </div>
             <ul className="text-sm space-y-2 text-text-muted">
-              <li><a href="mailto:contact@desarcourbin.com" className="hover:text-accent">contact@desarcourbin.com</a></li>
+              <li><a href="mailto:justine.desar@gmail.com" className="hover:text-accent">justine.desar@gmail.com</a></li>
               <li><a href="https://linkedin.com/in/justinedesardurats" target="_blank" rel="noopener noreferrer" className="hover:text-accent">linkedin.com/in/justinedesardurats</a></li>
               <li><a href="tel:+34606846541" className="hover:text-accent">+34 606 846 541</a></li>
             </ul>

@@ -255,7 +255,7 @@ export const en = {
       sending: "Sending…",
       validationTitle: "Please complete the following fields before submitting:",
       successMsg: "Thank you for reaching out. I have received your request and will get back to you shortly.",
-      error: "Something went wrong. Please try again or email contact@desarcourbin.com.",
+      error: "Something went wrong. Please try again or email justine.desar@gmail.com.",
       required: "Required",
       fundingStages: ["Pre-seed", "Seed", "Series A", "Series B+", "Growth SME"],
       teamSizes: ["1–5", "6–15", "16–50", "50–200", "200+"],
@@ -320,9 +320,9 @@ export const en = {
     body: `Website: desarcourbin.com
 Owner: Justine Desardurats
 Location: Barcelona, Spain
-Email: contact@desarcourbin.com
+Email: justine.desar@gmail.com
 Phone: +34 606 846 541
 
-This website collects personal data via its contact form (name, email, LinkedIn, company information) for the sole purpose of responding to your inquiry. Data is stored securely and never shared with third parties. You may request deletion of your data at any time by emailing contact@desarcourbin.com.`,
+This website collects personal data via its contact form (name, email, LinkedIn, company information) for the sole purpose of responding to your inquiry. Data is stored securely and never shared with third parties. You may request deletion of your data at any time by emailing justine.desar@gmail.com.`,
   },
 };
